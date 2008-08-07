@@ -101,13 +101,6 @@ def is_int(inp):
     except ValueError:
         return False
 
-def anon_url(url):
-    """
-    Takes a URL, returns the anonym.to'ified version of it.
-    """
-    return "http://anonym.to/?%s" % (url)
-
-
 class ZpCacher:
     """
     Stores a list of episodes we have FLV URLs for in a text file.

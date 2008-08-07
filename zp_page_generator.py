@@ -20,6 +20,12 @@ def toggle(i):
     """
     return i[::-1]
 
+def anon_url(url):
+    """
+    Takes a URL, returns the anonym.to'ified version of it.
+    """
+    return "http://anonym.to/?%s" % (url)
+
 
 # Config
 data = {}
