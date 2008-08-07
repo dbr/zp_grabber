@@ -1,3 +1,7 @@
+"""
+This basically parses the zp_cache.txt file into a prettier looking HTML page
+"""
+
 import re, random
 
 def sort_nicely( l ): 
