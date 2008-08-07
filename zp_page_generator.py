@@ -58,7 +58,9 @@ oddeven = ["odd", "even"] #for alternating line colours
 for vid in sort_nicely(videos.keys()):
     cur = videos[vid]
     
-    item = "<li class=\"%s\"><a href=\"%s\">%s</a> <span class=\"flv-link\"><a href=\"%s\">#</a></span></li>\n" % (oddeven[0], cur['flv'], cur['title'], cur['web'])
+    item = "<li class=\"%s\"><a href=\"%s\">%s</a> <span class=\"flv-link\"><a href=\"%s\">#</a></span></li>\n" % (
+        oddeven[0], anon_url(cur['flv']), cur['title'], anon_url(cur['web'])
+    )
     data['thelist'] += item
     oddeven=toggle(oddeven)
 
@@ -116,6 +118,7 @@ template = """<html>
         </div>
         <div id="footer" class="footer-text">
             This page simply links to the .flv files that <a href="http://www.escapistmagazine.com">The Escapist's</a> video-player displays.<br>
+            All links use <a href="http://anonym.to">anonym.to</a> to remove the HTTP referer<br>
             The code this was generated this page is available on <a href="http://github.com/dbr/zp_grabber/tree/master">GitHub</a>.
             And the current list of episodes can be found <a href="#">here</a>. Share and enjoy.<br>
             Remember and visit <a href="http://www.escapistmagazine.com">escapistmagazine.com</a> you filthy thief.
