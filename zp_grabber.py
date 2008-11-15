@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import sys, urllib, re
+import os, sys, urllib, re
 from hashlib import md5
 from optparse import OptionParser
 from BeautifulSoup import BeautifulSoup
