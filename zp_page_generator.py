@@ -2,7 +2,7 @@
 This basically parses the zp_cache.txt file into a prettier looking HTML page
 """
 
-import os, re, random
+import os, sys, re, random
 
 def sort_nicely( l ): 
     """
