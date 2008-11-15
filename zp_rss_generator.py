@@ -60,7 +60,7 @@ for vid in sort_nicely(videos.keys()):
         PyRSS2Gen.RSSItem(
                 title = title,
                 link = link,
-                description = """FLV Link: <a href="%s">%s</a>Original link: <a href="%s">%s</a> """ % (link, link, orig, orig),
+                description = """FLV Link: <a href="%s">%s</a><br>Original link: <a href="%s">%s</a> """ % (link, link, orig, orig),
                 guid = link
         )
     )
