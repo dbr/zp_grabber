@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import sys, urllib, re
+from hashlib import md5
 from optparse import OptionParser
 from BeautifulSoup import BeautifulSoup
 
@@ -66,10 +67,15 @@ class Cache:
             return False
     #end checkCache
 
-    def loadUrl(self, url):
+    def loadUrl(self, url, postdata = None):
         """
         Takes a URL, returns the contents of the URL, and does the caching.
         """
+        if postdata is None:
+            postdata = ""
+        else:
+            postdata = urllib.urlencode(postdata)
+        
         cacheExists = self.checkCache(url)
         if cacheExists:
             cache_file = open(cacheExists)
@@ -78,7 +84,7 @@ class Cache:
             return dat
         else:
             path = self.getCachePath(url)
-            dat = self.urllib.urlopen(url).read()
+            dat = self.urllib.urlopen(url, postdata).read()
             target_socket = open(path, "w+")
             target_socket.write(dat)
             target_socket.close()
@@ -172,7 +178,7 @@ class EscapistVideo:
     # Get the video ID
     t.get_vid()
     
-    Working as of Aug 6, 2008 (Escapist currently using CastFire CDN for video files)
+    Working as of Nov 16, 2008 (still using CastFire CDN for video files, with format= hash "protection" added)
     """
     def __init__(self, url):
         self.url = url
@@ -186,26 +192,30 @@ class EscapistVideo:
             raise error_invalidurl
     
     def _format_teller_url(self, vid):
-        base_url = "http://www.themis-group.com/global/castfire/flv/"+vid+"?onLoad=[type%20Function]&parent=Clip:%20baseUrl%20undefined,%20fileName%20"+vid+",%20start%20undefined,%20end%20undefined,%20type%20undefined&version=ThemisMedia1.0"
-        return base_url
+        base_url = "http://www.themis-group.com/global/castfire/flv/%s" % (vid)
+        postdata = {'version': 'ThemisMedia1.1',
+        'format': md5("Video %s Hash" % (vid)).hexdigest(),
+        }
+        return (base_url, postdata)
     
-    def _get_flv_link(self, url):
+    def _get_flv_link(self, url, postdata):
         x = Cache(useragent="Googlebot/2.1 (+http://www.googlebot.com/bot.html)")
-        src = x.loadUrl(url)
+        src = x.loadUrl(url, postdata)
         if src.find("url=") > -1:
             return urllib.unquote(str( # url decode..
                 src.split("url=")[1] # ..the segment after the url=
             ))
         else:
-            raise error_sitechange("Couldn't find the FLV url, check it is a valid URL you supplied. If so, the FLV retrival system may have changed!")
+            raise error_sitechange("Couldn't find the FLV url on %s, check it is a valid URL you supplied. If so, the FLV retrival system may have changed!" % (url))
     
     def get_vid(self):
         vid = self._parse_escapist_url()
         return vid
+    
     def get_flv_url(self):
         vid = self._parse_escapist_url()
-        flv_teller_url = self._format_teller_url(vid)
-        flv_url = self._get_flv_link(flv_teller_url)
+        flv_teller_url, flv_teller_postdata = self._format_teller_url(vid)
+        flv_url = self._get_flv_link(flv_teller_url, flv_teller_postdata)
         return flv_url
 #end EscapistVideo
 
@@ -218,7 +228,7 @@ def parse_page_for_videos(zpc, soup):
     Using the URL, it grabs the video-ID, checks if the ZpCacher
     knows the FLV already, if not, finds the flv url.
     
-    Working as of Aug 6, 2008. May break due to page layout changes.
+    Working as of Nov 16, 2008. May break due to page layout changes.
     """
     # counters
     cache_hits = 0
@@ -252,7 +262,7 @@ def get_recent_zp_videos(get_all = False):
     It parses the first page of videos (and the rest, if requested)
     It gets the page count using the pagination_pages div.
     
-    Working as of Aug 6, 2008. Getting all pages 
+    Working as of Nov 16, 2008. Getting all pages 
     could break due to layout changes.
     """
     zpc = ZpCacher()
@@ -289,7 +299,7 @@ def main():
     Takes one (or more) ZP episode URLs, returns the flv URL
     """
     parser = OptionParser()
-    parser.add_option("-g", "--grab", dest="grab", action="store_true",
+    parser.add_option("-g", "--grab", dest="grab", action="store_true", default="true",
                       help="retrives and caches flv-links from escapistmagazine.com's ZP page (overrides)")
     parser.add_option("-a", "--all", dest="all", action="store_true",
                       help="retrives videos from all Zero-Punctuation-list pages")
