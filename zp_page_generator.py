@@ -78,6 +78,7 @@ for vid in sort_nicely(videos.keys()):
 template = """<html>
     <head>
         <title>%(title)s</title>
+        <link href="/zp.rss" rel="alternate" type="application/rss+xml" title="Zero Punctuation .FLV link RSS feed">
         <style type="text/css" media="screen">
             body{
                 background-color:#fede00;
@@ -127,6 +128,7 @@ template = """<html>
             </div>
         </div>
         <div id="footer" class="footer-text">
+            <a href="/zp.rss">RSS Feed!</a><br>
             This page simply links to the .flv files that <a href="http://www.escapistmagazine.com">The Escapist's</a> video-player displays.<br>
             All links use <a href="http://anonym.to">anonym.to</a> to remove the HTTP referer. The # link goes to the original ZP page.<br>
             The code this was generated this page is available on <a href="http://github.com/dbr/zp_grabber/tree/master">GitHub</a>.
