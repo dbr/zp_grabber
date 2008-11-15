@@ -44,7 +44,7 @@ data['title'] = random.choice([
 data['thelist'] = ""
 
 cache_file = os.path.join(
-    os.path.abspath("."),
+    sys.path[0],
     "zp_cache.txt"
 )
 lines = open(cache_file).readlines()
