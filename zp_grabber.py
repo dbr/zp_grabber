@@ -121,7 +121,8 @@ class ZpCacher:
     video_id|flv_url|web_url|title
     """
     def __init__(self):
-        self.cache_file = "zp_cache.txt"
+        self.cache_file = cache_file = os.path.join(os.path.abspath("."), "zp_cache.txt")
+        
         self.cache = {}
         self.load_cache()
     def load_cache(self):
