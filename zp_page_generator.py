@@ -2,7 +2,7 @@
 This basically parses the zp_cache.txt file into a prettier looking HTML page
 """
 
-import re, random
+import os, re, random
 
 def sort_nicely( l ): 
     """
@@ -35,13 +35,19 @@ def anon_url(url):
 data = {}
 data['title'] = random.choice([
     "Theft of the Punctuationless",
+    "So it was YOU who stole the punctuation",
+    "..and while you're at it, why not steal his hat too? Thief.",
+    "Come steal free things"
 ])
 
 # Parse cache file
 data['thelist'] = ""
 
-file = "zp_cache.txt"
-lines = open(file).readlines()
+cache_file = os.path.join(
+    os.path.abspath("."),
+    "zp_cache.txt"
+)
+lines = open(cache_file).readlines()
 
 videos = {}
 for current_line in lines:
@@ -122,9 +128,9 @@ template = """<html>
         </div>
         <div id="footer" class="footer-text">
             This page simply links to the .flv files that <a href="http://www.escapistmagazine.com">The Escapist's</a> video-player displays.<br>
-            All links use <a href="http://anonym.to">anonym.to</a> to remove the HTTP referer<br>
+            All links use <a href="http://anonym.to">anonym.to</a> to remove the HTTP referer. The # link goes to the original ZP page.<br>
             The code this was generated this page is available on <a href="http://github.com/dbr/zp_grabber/tree/master">GitHub</a>.
-            And the current list of episodes can be found <a href="#">here</a>. Share and enjoy.<br>
+            And the current list of episodes can be found <a href="zp_cache.txt">here</a>. Share and enjoy.<br>
             Remember and visit <a href="http://www.escapistmagazine.com">escapistmagazine.com</a> you filthy thief.
         </div>
     </body>
