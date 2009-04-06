@@ -41,6 +41,6 @@ for current_line in lines:
 counter = 1
 for vid in sort_nicely(videos.keys()):
     cur = videos[vid]
-    new_name = "Zero Punctuation - [%02d] - %s" % (counter, cur['title'])
+    new_name = "Zero Punctuation - [%02d] - %s.flv" % (counter, cur['title'])
     print "wget -c %s -O \"%s\"" % (cur['flv'], new_name)
     counter += 1
