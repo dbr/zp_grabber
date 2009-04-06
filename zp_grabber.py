@@ -193,14 +193,14 @@ class EscapistVideo:
             raise error_invalidurl
     
     def _format_teller_url(self, vid):
-        base_url = "http://www.themis-group.com/global/castfire/flv/%s" % (vid)
-        postdata = {'version': 'ThemisMedia1.1',
+        base_url = "http://www.themis-group.com/global/castfire/m4v/%s" % (vid)
+        postdata = {'version': 'ThemisMedia1.2',
         'format': md5("Video %s Hash" % (vid)).hexdigest(),
         }
         return (base_url, postdata)
     
     def _get_flv_link(self, url, postdata):
-        x = Cache(useragent="Googlebot/2.1 (+http://www.googlebot.com/bot.html)")
+        x = Cache(useragent="User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-GB; rv:1.9.0.4) Gecko/2008102920 Firefox/3.0.4")
         src = x.loadUrl(url, postdata)
         if src.find("url=") > -1:
             return urllib.unquote(str( # url decode..
