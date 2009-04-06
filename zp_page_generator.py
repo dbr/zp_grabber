@@ -4,7 +4,7 @@ This basically parses the zp_cache.txt file into a prettier looking HTML page
 
 import os, sys, re, random
 
-def sort_nicely( l ): 
+def sort_nicely(l): 
     """
     Sort the given list in the way that humans expect. 
     """ 
