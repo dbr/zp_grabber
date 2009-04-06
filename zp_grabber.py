@@ -179,7 +179,7 @@ class EscapistVideo:
     # Get the video ID
     t.get_vid()
     
-    Working as of Nov 16, 2008 (still using CastFire CDN for video files, with format= hash "protection" added)
+    Working as of April 6, 2009 (1.2 of the ThemisMedia thing, uses ../mp4/ in URL)
     """
     def __init__(self, url):
         self.url = url
@@ -229,7 +229,7 @@ def parse_page_for_videos(zpc, soup):
     Using the URL, it grabs the video-ID, checks if the ZpCacher
     knows the FLV already, if not, finds the flv url.
     
-    Working as of Nov 16, 2008. May break due to page layout changes.
+    Working as of April 6, 2009. May break due to page layout changes.
     """
     # counters
     cache_hits = 0
@@ -263,7 +263,7 @@ def get_recent_zp_videos(get_all = False):
     It parses the first page of videos (and the rest, if requested)
     It gets the page count using the pagination_pages div.
     
-    Working as of Nov 16, 2008. Getting all pages 
+    Working as of April 6, 2009. Getting all pages 
     could break due to layout changes.
     """
     zpc = ZpCacher()
