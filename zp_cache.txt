@@ -57,6 +57,7 @@
 739|http://video.escapistmagazine.com/video/98173/Valvet-Assassin_2009-05-19-115230.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/739-Velvet-Assassin|Velvet Assassin
 189|http://video.escapistmagazine.com/video/21808/Soul-Caliber-IV_2008-08-20-143719.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/189-Soul-Calibur-IV|Soul Calibur IV
 502|http://video.escapistmagazine.com/video/49224/Tomb-Raider-Underworld_2009-01-12-174334.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/502-Tomb-Raider-Underworld|Tomb Raider: Underworld
+759|http://video.escapistmagazine.com/video/103565/Bionic-Commando_2009-06-01-104514.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/759-Bionic-Commando|Bionic Commando
 565|http://video.escapistmagazine.com/video/63002/Fear-2_2009-02-23-095316.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/565-Fear-2|Fear 2
 99|http://video.escapistmagazine.com/video/15327/Metal-Gear-Solid-4_2008-06-23-191449.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/99-Metal-Gear-Solid-4|Metal Gear Solid 4
 93|http://video.escapistmagazine.com/video/14971/Haze_2008-06-18-100813.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/93-Haze|Haze
@@ -74,6 +75,7 @@
 724|http://video.escapistmagazine.com/video/94431/Valkyria-Chronicles_2009-05-11-105814.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/724-Valkyria-Chronicles|Valkyria Chronicles
 600|http://video.escapistmagazine.com/video/67512/House-of-the-Dead-Overkill_2009-03-09-101437.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/600-House-of-the-Dead-Overkill|House of the Dead: Overkill
 157|http://video.escapistmagazine.com/video/19751/The-E3-Trailer-Park_2008-07-30-101915.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/157-The-E3-Trailer-Park|The E3 Trailer Park
+748|http://video.escapistmagazine.com/video/101109/Duke-Nukem-Forever_2009-05-26-134757.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/748-Duke-Nukem-Forever|Duke Nukem Forever
 553|http://video.escapistmagazine.com/video/60814/Skate-2_2009-02-16-094154.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/553-Skate-2|Skate 2
 231|http://video.escapistmagazine.com/video/26683/Mercanies-2_2008-10-01-113849.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/231-Mercenaries-2|Mercenaries 2
 48|http://video.escapistmagazine.com/video/12739/Grand-Theft-Auto-IV_2008-05-20-155823.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/48-Grand-Theft-Auto-IV|Grand Theft Auto IV
