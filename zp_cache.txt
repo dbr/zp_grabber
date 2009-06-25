@@ -31,7 +31,7 @@
 7|http://video.escapistmagazine.com/video/12799/Peggle_2008-05-21-080137.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/7-Peggle|Peggle
 420|http://video.escapistmagazine.com/video/32233/Fallout-3_2008-11-17-110114.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/420-Fallout-3|Fallout 3
 584|http://video.escapistmagazine.com/video/65362/Spiderman-Web-of-Shadows_2009-03-02-154025.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/584-Spiderman-Web-of-Shadows|Spiderman: Web of Shadows
-779|http://video.escapistmagazine.com/video/110145/The-Second-Annual-E3-Hype-Massacre_2009-06-15-105609.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/779-The-Second-Annual-E3-Hype-Massacre|The Second Annual E3 Hype Massacre
+616|http://video.escapistmagazine.com/video/70164/50-Cent-Blood-on-the-Sand_2009-03-17-113515.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/616-50-Cent-Blood-on-the-Sand|50 Cent: Blood on the Sand
 108|http://video.escapistmagazine.com/video/15945/Webcomics_2008-06-30-194742.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/108-Webcomics|Webcomics
 696|http://video.escapistmagazine.com/video/88729/Siren-Blood-Curse_2009-04-28-130400.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/696-Siren-Blood-Curse|Siren Blood Curse
 33|http://video.escapistmagazine.com/video/12827/No-More-Heroes_2008-05-21-084654.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/33-No-More-Heroes|No More Heroes
@@ -85,12 +85,12 @@
 1|http://video.escapistmagazine.com/video/12793/Heavenly-Sword-and-Other-Stuff_2008-05-21-075536.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/1-Heavenly-Sword-and-Other-Stuff|Heavenly Sword and Other Stuff
 5|http://video.escapistmagazine.com/video/12796/Tomb-Raider-Anniversary_2008-05-21-075847.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/5-Tomb-Raider-Anniversary|Tomb Raider Anniversary
 9|http://video.escapistmagazine.com/video/44614/Tablua-Rasa_2008-12-29-121251.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/9-Tabula-Rasa|Tabula Rasa
-689|http://video.escapistmagazine.com/video/84245/Tom-Clancys-H-A-W-X_2009-04-20-105421.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/689-Tom-Clancys-H-A-W-X|Tom Clancy's H.A.W.X.
+476|http://video.escapistmagazine.com/video/43250/The-Year-in-Review-2008_2008-12-22-151632.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/476-The-Year-in-Review-2008|The Year in Review - 2008
 203|http://video.escapistmagazine.com/video/22778/Braid_2008-08-27-112913.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/203-Braid|Braid
 208|http://video.escapistmagazine.com/video/23322/Eve-Online_2008-09-03-113419.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/208-Eve-Online|Eve Online
-616|http://video.escapistmagazine.com/video/70164/50-Cent-Blood-on-the-Sand_2009-03-17-113515.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/616-50-Cent-Blood-on-the-Sand|50 Cent: Blood on the Sand
+779|http://video.escapistmagazine.com/video/110145/The-Second-Annual-E3-Hype-Massacre_2009-06-15-105609.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/779-The-Second-Annual-E3-Hype-Massacre|The Second Annual E3 Hype Massacre
 75|http://video.escapistmagazine.com/video/14009/Oblivion_2008-06-04-112531.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/75-Oblivion|Oblivion
 486|http://video.escapistmagazine.com/video/46066/Awards-for-2008_2009-01-05-112537.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/486-Awards-for-2008|Awards for 2008
 482|http://video.escapistmagazine.com/video/44674/Prince-of-Persia_2008-12-29-144431.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/482-Prince-of-Persia|Prince of Persia
 472|http://video.escapistmagazine.com/video/41650/Sonic-Unleashed_2008-12-17-121714.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/472-Sonic-Unleashed|Sonic Unleashed
-476|http://video.escapistmagazine.com/video/43250/The-Year-in-Review-2008_2008-12-22-151632.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/476-The-Year-in-Review-2008|The Year in Review - 2008
+689|http://video.escapistmagazine.com/video/84245/Tom-Clancys-H-A-W-X_2009-04-20-105421.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/689-Tom-Clancys-H-A-W-X|Tom Clancy's H.A.W.X.
