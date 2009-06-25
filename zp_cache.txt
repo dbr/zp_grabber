@@ -84,7 +84,7 @@
 48|http://video.escapistmagazine.com/video/12739/Grand-Theft-Auto-IV_2008-05-20-155823.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/48-Grand-Theft-Auto-IV|Grand Theft Auto IV
 1|http://video.escapistmagazine.com/video/12793/Heavenly-Sword-and-Other-Stuff_2008-05-21-075536.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/1-Heavenly-Sword-and-Other-Stuff|Heavenly Sword and Other Stuff
 5|http://video.escapistmagazine.com/video/12796/Tomb-Raider-Anniversary_2008-05-21-075847.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/5-Tomb-Raider-Anniversary|Tomb Raider Anniversary
-9|http://video.escapistmagazine.com/video/12801/Tabula-Rasa_2008-05-21-080309.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/9-Tabula-Rasa|Tabula Rasa
+9|http://video.escapistmagazine.com/video/44614/Tablua-Rasa_2008-12-29-121251.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/9-Tabula-Rasa|Tabula Rasa
 689|http://video.escapistmagazine.com/video/84245/Tom-Clancys-H-A-W-X_2009-04-20-105421.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/689-Tom-Clancys-H-A-W-X|Tom Clancy's H.A.W.X.
 203|http://video.escapistmagazine.com/video/22778/Braid_2008-08-27-112913.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/203-Braid|Braid
 208|http://video.escapistmagazine.com/video/23322/Eve-Online_2008-09-03-113419.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/208-Eve-Online|Eve Online
