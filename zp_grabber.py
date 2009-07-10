@@ -156,7 +156,7 @@ class ZpCacher:
         self.save()
     def save(self):
         out = ""
-        for vid,values in self.cache.items():
+        for vid,values in sorted(self.cache.items(), key=lambda x: x[0]):
             out += "%s|%s|%s|%s\n" % (vid, values['flv'], values['web'], values['title'])
         f = open(self.cache_file, "w+")
         f.write(out)
