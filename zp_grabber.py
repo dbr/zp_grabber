@@ -190,7 +190,7 @@ class EscapistVideo:
             vid = vid_check.groups()[0]
             return vid
         else:
-            raise error_invalidurl
+            raise error_invalidurl("%s" % self.url)
     
     def _format_teller_url(self, vid):
         base_url = "http://www.themis-group.com/global/castfire/m4v/%s" % (vid)
@@ -241,7 +241,10 @@ def parse_page_for_videos(zpc, soup):
     for cv in av:
         # Get title and the URL
         title = cv.findAll('div',{'class':'title'})[0].contents[0]
-        web_url = "http://www.escapistmagazine.com" + cv.a['href']
+        if cv.a['href'].startswith("http://"):
+            web_url = cv.a['href']
+        else:
+            web_url = "http://www.escapistmagazine.com" + cv.a['href']
         
         z = EscapistVideo(web_url)
         vid = z.get_vid()
