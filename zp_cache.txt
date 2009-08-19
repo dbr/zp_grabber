@@ -92,7 +92,13 @@
 8|http://video.escapistmagazine.com/video/12800/Halo-3_2008-05-21-080142.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/8-Halo-3|Halo 3
 800|http://video.escapistmagazine.com/video/116593/The-Sims-3_2009-06-29-111519.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/800-The-Sims-3|The Sims 3
 811|http://video.escapistmagazine.com/video/119743/Ghostbusters-The-Video-Game_2009-07-06-112420.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/811-Ghostbusters-The-Video-Game|Ghostbusters: The Video Game
+822|http://video.escapistmagazine.com/video/124205/Overlord-2_2009-07-13-114544.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/822-Overlord-2|Overlord 2
+834|http://video.escapistmagazine.com/video/127651/Red-Faction-Guerrilla_2009-07-20-101230.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/834-Red-Faction-Guerrilla|Red Faction Guerrilla
 84|http://video.escapistmagazine.com/video/12794/Console-Rundown_2008-05-21-075712.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/84-Console-Rundown|Console Rundown
+844|http://video.escapistmagazine.com/video/131075/Wii-Sports-Resort_2009-07-27-102505.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/844-Wii-Sports-Resort|Wii Sports Resort
+860|http://video.escapistmagazine.com/video/134745/Call-of-Juarez-Bound-in-Blood_2009-08-03-152435.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/860-Call-of-Juarez-Bound-in-Blood|Call of Juarez: Bound in Blood
+869|http://video.escapistmagazine.com/video/138059/The-Conduit_2009-08-10-113121.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/869-The-Conduit|The Conduit
+878|http://video.escapistmagazine.com/video/141735/Silent-Hill-2_2009-08-17-110328.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/878-Silent-Hill-2|Silent Hill 2
 9|http://video.escapistmagazine.com/video/44614/Tablua-Rasa_2008-12-29-121251.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/9-Tabula-Rasa|Tabula Rasa
 93|http://video.escapistmagazine.com/video/14971/Haze_2008-06-18-100813.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/93-Haze|Haze
 99|http://video.escapistmagazine.com/video/15327/Metal-Gear-Solid-4_2008-06-23-191449.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/99-Metal-Gear-Solid-4|Metal Gear Solid 4
