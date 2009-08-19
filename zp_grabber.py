@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import os, sys, urllib, re
-from hashlib import md5
+from hashlib import md5, sha1
 from optparse import OptionParser
 from BeautifulSoup import BeautifulSoup
 
@@ -20,10 +20,6 @@ class Cache:
     import time
     import tempfile
     import urllib
-    try:
-        import sha1 as hasher
-    except ImportError:
-        import md5 as hasher
     
     def __init__(self, max_age=21600, prefix="zp_grabber", useragent = "Mozilla-compatible 5.0 etc"):
         class AppURLopener(urllib.FancyURLopener):
@@ -44,7 +40,7 @@ class Cache:
         """
         Calculates the cache path (/temp_directory/hash_of_URL)
         """
-        cache_name = self.hasher.new(url).hexdigest()
+        cache_name = sha1(url).hexdigest()
         cache_path = self.os.path.join(self.tmp, cache_name)
         return cache_path
     #end getUrl
