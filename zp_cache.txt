@@ -99,6 +99,7 @@
 860|http://video.escapistmagazine.com/video/134745/Call-of-Juarez-Bound-in-Blood_2009-08-03-152435.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/860-Call-of-Juarez-Bound-in-Blood|Call of Juarez: Bound in Blood
 869|http://video.escapistmagazine.com/video/138059/The-Conduit_2009-08-10-113121.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/869-The-Conduit|The Conduit
 878|http://video.escapistmagazine.com/video/141735/Silent-Hill-2_2009-08-17-110328.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/878-Silent-Hill-2|Silent Hill 2
+892|http://video.escapistmagazine.com/video/145945/2-5D-Hoedown_2009-08-24-154218.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/892-2-5D-Hoedown|2.5D Hoedown
 9|http://video.escapistmagazine.com/video/44614/Tablua-Rasa_2008-12-29-121251.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/9-Tabula-Rasa|Tabula Rasa
 93|http://video.escapistmagazine.com/video/14971/Haze_2008-06-18-100813.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/93-Haze|Haze
 99|http://video.escapistmagazine.com/video/15327/Metal-Gear-Solid-4_2008-06-23-191449.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/99-Metal-Gear-Solid-4|Metal Gear Solid 4
