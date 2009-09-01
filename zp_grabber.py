@@ -300,9 +300,9 @@ def main():
     """
     parser = OptionParser()
     parser.add_option("-g", "--grab", dest="grab", action="store_true", default="true",
-                      help="retrives and caches flv-links from escapistmagazine.com's ZP page (overrides)")
+                      help="retrieves and caches flv-links from escapistmagazine.com's ZP page (overrides)")
     parser.add_option("-a", "--all", dest="all", action="store_true",
-                      help="retrives videos from all Zero-Punctuation-list pages")
+                      help="retrieves videos from all Zero-Punctuation-list pages")
 
     (options, args) = parser.parse_args()
     
