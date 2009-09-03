@@ -266,7 +266,7 @@ def get_recent_zp_videos(get_all = False):
     flv_requests, cache_hits = parse_page_for_videos(zpc, soup)
     if get_all:
         for page in soup.findAll('div',{'class':'pagination_pages'})[0].findAll('a'):
-            if page.contents[0].is_alpha() and int(page.contents[0]) > 1:
+            if page.contents[0].isdigit() and int(page.contents[0]) > 1:
                 url="http://www.escapistmagazine.com/videos/view/zero-punctuation?page=%d" % (int(page.contents[0]))
                 src = x.loadUrl(url)
                 soup = BeautifulSoup(src)
