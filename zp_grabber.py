@@ -162,7 +162,7 @@ class EscapistVideo:
     # Get the video ID
     t.get_vid()
     
-    Working as of April 6, 2009 (1.2 of the ThemisMedia thing, uses ../mp4/ in URL)
+    Working as of Sep 3, 2009 (uses new, simpler flashvar="config=http://" system)
     """
     def __init__(self, url):
         self.url = url
@@ -175,15 +175,7 @@ class EscapistVideo:
         else:
             raise error_invalidurl("%s" % self.url)
     
-    def _format_teller_url(self, vid):
-        base_url = "http://www.themis-group.com/global/castfire/m4v/%s" % (vid)
-        postdata = {'version': 'ThemisMedia1.2',
-        'format': md5("Video %s Hash" % (vid)).hexdigest(),
-        }
-        return (base_url, postdata)
-    
     def _get_flv_link(self, url, postdata):
-        x = Cache(useragent="User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-GB; rv:1.9.0.4) Gecko/2008102920 Firefox/3.0.4")
         src = x.loadUrl(url, postdata)
         if src.find("url=") > -1:
             return urllib.unquote(str( # url decode..
@@ -197,9 +189,19 @@ class EscapistVideo:
         return vid
     
     def get_flv_url(self):
-        vid = self._parse_escapist_url()
-        flv_teller_url, flv_teller_postdata = self._format_teller_url(vid)
-        flv_url = self._get_flv_link(flv_teller_url, flv_teller_postdata)
+        # Check URL
+        self._parse_escapist_url()
+
+        x = Cache(useragent="User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-GB; rv:1.9.0.4) Gecko/2008102920 Firefox/3.0.4")
+        src = x.loadUrl(self.url)
+        soup = BeautifulSoup(src)
+        vid_player = soup.findAll('div', id="video_player")
+        embed = vid_player[0].find('embed')
+        config_url = embed['flashvars'].split("config=")[1]
+        config = x.loadUrl(config_url)
+        # Ew. The contents doesn't parse as JSON, so this is necessary
+        flv_url = config.split("{'url':'")[2].split("'")[0]
+
         return flv_url
 #end EscapistVideo
 
@@ -212,7 +214,7 @@ def parse_page_for_videos(zpc, soup):
     Using the URL, it grabs the video-ID, checks if the ZpCacher
     knows the FLV already, if not, finds the flv url.
     
-    Working as of April 6, 2009. May break due to page layout changes.
+    Working as of Sep 3, 2009. May break due to page layout changes.
     """
     # counters
     cache_hits = 0
