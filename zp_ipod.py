@@ -129,13 +129,19 @@ def main():
         _, urlfilename = os.path.split(urlpath)
         
         # Generate wget command
-        grab_command = ["curl", cur['flv'], "-o", urlfilename, "-C"]
-    
+        grab_command = ["curl", "-L", "-A", "\"Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)\"", "-C", "-", cur['flv'], "-o", urlfilename]
         print "Getting FLV file:"
         print grab_command
         gproc = subprocess.Popen(grab_command)
         gproc.communicate()
+        if gproc.returncode != 0:
+            print "Non-zero exit code: %s" % gproc.returncode
+            continue
         print
+
+        if not os.path.isfile(urlfilename):
+            print "Downloaded file \"%s\" not found, not transcoding" % urlfilename
+            continue
 
         transcoded_name = "Zero Punctuation - [%02d] - %s.mp4" % (counter, cur['title'])
 
@@ -144,6 +150,9 @@ def main():
         transcode_cmd = t.getcommand(transcoded_name)
         tproc = subprocess.Popen(transcode_cmd)
         tproc.communicate()
+        if gproc.returncode != 0:
+            print "Non-zero exit code: %s" % gproc.returncode
+            continue
         print
         
         # Mark as done, as save
