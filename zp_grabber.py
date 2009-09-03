@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os, sys, urllib, re
+import os, sys, urllib, re, tempfile, time
 from hashlib import md5, sha1
 from optparse import OptionParser
 from BeautifulSoup import BeautifulSoup
@@ -16,23 +16,19 @@ class Cache:
     >>> ca.loadUrl("http://example.com") #doctest: +ELLIPSIS
     '<HTML>...'
     """
-    import os
-    import time
-    import tempfile
-    import urllib
     
     def __init__(self, max_age=21600, prefix="zp_grabber", useragent = "Mozilla-compatible 5.0 etc"):
         class AppURLopener(urllib.FancyURLopener):
             version = useragent
-        self.urllib._urlopener = AppURLopener()
+        urllib._urlopener = AppURLopener()
         
         self.prefix = prefix
         self.max_age = max_age
         
-        tmp = self.tempfile.gettempdir()
-        tmppath = self.os.path.join(tmp, prefix)
-        if not self.os.path.isdir(tmppath):
-            self.os.mkdir(tmppath)
+        tmp = tempfile.gettempdir()
+        tmppath = os.path.join(tmp, prefix)
+        if not os.path.isdir(tmppath):
+            os.mkdir(tmppath)
         self.tmp = tmppath
     #end __init__
     
@@ -41,7 +37,7 @@ class Cache:
         Calculates the cache path (/temp_directory/hash_of_URL)
         """
         cache_name = sha1(url).hexdigest()
-        cache_path = self.os.path.join(self.tmp, cache_name)
+        cache_path = os.path.join(self.tmp, cache_name)
         return cache_path
     #end getUrl
     
@@ -51,9 +47,9 @@ class Cache:
         If so, returns path, if not, returns False
         """
         path = self.getCachePath(url)
-        if self.os.path.isfile(path):
-            cache_modified_time = self.os.stat(path).st_mtime
-            time_now = self.time.time()
+        if os.path.isfile(path):
+            cache_modified_time = os.stat(path).st_mtime
+            time_now = time.time()
             if cache_modified_time < time_now - self.max_age:
                 # Cache is old
                 return False
@@ -80,7 +76,7 @@ class Cache:
             return dat
         else:
             path = self.getCachePath(url)
-            dat = self.urllib.urlopen(url, postdata).read()
+            dat = urllib.urlopen(url, postdata).read()
             target_socket = open(path, "w+")
             target_socket.write(dat)
             target_socket.close()
@@ -92,16 +88,6 @@ class Cache:
 ####################
 # Helper functions #
 ####################
-
-def is_int(inp):
-    """
-    Checks if supplied variable is an integer.
-    Returns True if it is an integer, or False if not.
-    """
-    try:
-        return True
-    except ValueError:
-        return False
 
 class ZpCacher:
     """
@@ -121,6 +107,7 @@ class ZpCacher:
         
         self.cache = {}
         self.load_cache()
+
     def load_cache(self):
         try:
             cur_cache = open(self.cache_file)
@@ -166,9 +153,9 @@ class error_connection(Exception):pass
 
 class EscapistVideo:
     """
-    Takes an EscapistMagazine /video/view/... URL, retrives the URL for the .flv file
+    Takes an EscapistMagazine /video/view/... URL, retrieves the URL for the .flv file
     
-    # Initalise
+    # Initialise
     t = EscapistMagazine("http://www.escapistmagazine.com/videos/view/zero-punctuation/175-Ninja-Gaiden-2")
     # Get the URL
     t.get_flv_url() 
@@ -277,7 +264,7 @@ def get_recent_zp_videos(get_all = False):
     flv_requests, cache_hits = parse_page_for_videos(zpc, soup)
     if get_all:
         for page in soup.findAll('div',{'class':'pagination_pages'})[0].findAll('a'):
-            if is_int(page.contents[0]) and int(page.contents[0]) > 1:
+            if page.contents[0].is_alpha() and int(page.contents[0]) > 1:
                 url="http://www.escapistmagazine.com/videos/view/zero-punctuation?page=%d" % (int(page.contents[0]))
                 src = x.loadUrl(url)
                 soup = BeautifulSoup(src)
