@@ -1,89 +1,18 @@
 #!/usr/bin/env python
-import os, sys, urllib, re, tempfile, time
-from hashlib import md5, sha1
+import os, sys, urllib, urllib2, tempfile, re
+from cache import CacheHandler
 from optparse import OptionParser
 from BeautifulSoup import BeautifulSoup
 
-class Cache:
-    """
-    Simple caching URL opener. Acts like:
-    import urllib
-    return urllib.urlopen("http://example.com").read()
-    
-    Caches complete files to temp directory, 
-    
-    >>> ca = Cache()
-    >>> ca.loadUrl("http://example.com") #doctest: +ELLIPSIS
-    '<HTML>...'
-    """
-    
-    def __init__(self, max_age=21600, prefix="zp_grabber", useragent = "Mozilla-compatible 5.0 etc"):
-        class AppURLopener(urllib.FancyURLopener):
-            version = useragent
-        urllib._urlopener = AppURLopener()
-        
-        self.prefix = prefix
-        self.max_age = max_age
-        
-        tmp = tempfile.gettempdir()
-        tmppath = os.path.join(tmp, prefix)
-        if not os.path.isdir(tmppath):
-            os.mkdir(tmppath)
-        self.tmp = tmppath
-    #end __init__
-    
-    def getCachePath(self, url):
-        """
-        Calculates the cache path (/temp_directory/hash_of_URL)
-        """
-        cache_name = sha1(url).hexdigest()
-        cache_path = os.path.join(self.tmp, cache_name)
-        return cache_path
-    #end getUrl
-    
-    def checkCache(self, url):
-        """
-        Takes a URL, checks if a cache exists for it.
-        If so, returns path, if not, returns False
-        """
-        path = self.getCachePath(url)
-        if os.path.isfile(path):
-            cache_modified_time = os.stat(path).st_mtime
-            time_now = time.time()
-            if cache_modified_time < time_now - self.max_age:
-                # Cache is old
-                return False
-            else:
-                return path
-        else:
-            return False
-    #end checkCache
+def get_cache_dir(suffix):
+    tmp = tempfile.gettempdir()
+    tmppath = os.path.join(tmp, suffix)
+    if not os.path.isdir(tmppath):
+        os.mkdir(tmppath)
+    return tmppath
 
-    def loadUrl(self, url, postdata = None):
-        """
-        Takes a URL, returns the contents of the URL, and does the caching.
-        """
-        if postdata is None:
-            postdata = ""
-        else:
-            postdata = urllib.urlencode(postdata)
-        
-        cacheExists = self.checkCache(url)
-        if cacheExists:
-            cache_file = open(cacheExists)
-            dat = cache_file.read()
-            cache_file.close()
-            return dat
-        else:
-            path = self.getCachePath(url)
-            dat = urllib.urlopen(url, postdata).read()
-            target_socket = open(path, "w+")
-            target_socket.write(dat)
-            target_socket.close()
-            return dat
-        #end if cacheExists
-    #end loadUrl
-#end Cache
+cached_opener = urllib2.build_opener(CacheHandler(get_cache_dir("zp_grabber")))
+cached_opener.addheaders = [('User-agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3')]
 
 ####################
 # Helper functions #
@@ -176,7 +105,7 @@ class EscapistVideo:
             raise error_invalidurl("%s" % self.url)
     
     def _get_flv_link(self, url, postdata):
-        src = x.loadUrl(url, postdata)
+        src = cached_opener.open(url, postdata).read()
         if src.find("url=") > -1:
             return urllib.unquote(str( # url decode..
                 src.split("url=")[1] # ..the segment after the url=
@@ -192,17 +121,25 @@ class EscapistVideo:
         # Check URL
         self._parse_escapist_url()
 
-        x = Cache(useragent="User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-GB; rv:1.9.0.4) Gecko/2008102920 Firefox/3.0.4")
-        src = x.loadUrl(self.url)
+        webp = cached_opener.open(self.url)
+        src = webp.read()
         soup = BeautifulSoup(src)
+        
+        # Extract player from the soup
         vid_player = soup.findAll('div', id="video_player")
         embed = vid_player[0].find('embed')
         config_url = embed['flashvars'].split("config=")[1]
-        config = x.loadUrl(config_url)
+        
+        # Got flashvars config path, load it
+        config = cached_opener.open(config_url).read()
+        
         # Ew. The contents doesn't parse as JSON, so this is necessary
-        flv_url = config.split("{'url':'")[2].split("'")[0]
+        flv_teller_url = config.split("{'url':'")[2].split("'")[0]
 
-        return flv_url
+        # URL in config must be resolved, it 301 redirects to the real one
+        webp = cached_opener.open(flv_teller_url)
+        return webp.url
+
 #end EscapistVideo
 
 def parse_page_for_videos(zpc, soup):
@@ -257,9 +194,10 @@ def get_recent_zp_videos(get_all = False):
     zpc = ZpCacher()
     
     # Load the newest ZP page, into BeautifulSoup
-    x = Cache(useragent="Googlebot/2.1 (+http://www.googlebot.com/bot.html)")
     url="http://www.escapistmagazine.com/videos/view/zero-punctuation"
-    src = x.loadUrl(url)
+    webp = cached_opener.open(url)
+    src = webp.read()
+    src = cached_opener.open(url).read()
     soup = BeautifulSoup(src)
     
     # Always parse first page
@@ -268,7 +206,7 @@ def get_recent_zp_videos(get_all = False):
         for page in soup.findAll('div',{'class':'pagination_pages'})[0].findAll('a'):
             if page.contents[0].isdigit() and int(page.contents[0]) > 1:
                 url="http://www.escapistmagazine.com/videos/view/zero-punctuation?page=%d" % (int(page.contents[0]))
-                src = x.loadUrl(url)
+                src = cached_opener.open(url).read()
                 soup = BeautifulSoup(src)
                 fr, ch = parse_page_for_videos(zpc, soup)
                 flv_requests += fr
