@@ -91,7 +91,7 @@ class EscapistVideo:
     # Get the video ID
     t.get_vid()
     
-    Working as of Sep 3, 2009 (uses new, simpler flashvar="config=http://" system)
+    Working as of Oct 16, 2009 (flashvar="config=http://" system, and resolve 301 redirect to this URL)
     """
     def __init__(self, url):
         self.url = url
