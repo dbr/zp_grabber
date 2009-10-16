@@ -102,5 +102,11 @@
 892|http://video.escapistmagazine.com/video/145945/2-5D-Hoedown_2009-08-24-154218.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/892-2-5D-Hoedown|2.5D Hoedown
 9|http://video.escapistmagazine.com/video/44614/Tablua-Rasa_2008-12-29-121251.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/9-Tabula-Rasa|Tabula Rasa
 901|http://video.escapistmagazine.com/video/149581/Tales-of-Monkey-Island_2009-08-31-105754.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/901-Tales-of-Monkey-Island|Tales of Monkey Island
+916|http://cdn11.castfire.com/video/98/533/1708/154871/Wolfenstein_2009-09-09-094010-1.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/916-Wolfenstein|Wolfenstein
+926|http://cdn11.castfire.com/video/98/533/1708/157759/Batman-Arkham-Asylum_2009-09-14-124202-1.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/926-Batman-Arkham-Asylum|Batman Arkham Asylum
 93|http://video.escapistmagazine.com/video/14971/Haze_2008-06-18-100813.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/93-Haze|Haze
+941|http://cdn11.castfire.com/video/98/533/1708/161889/Beatles-Rock-Band-and-Guitar-Hero-5_2009-09-21-152113-1.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/941-Beatles-Rock-Band-and-Guitar-Hero-5|Beatles Rock Band and Guitar Hero 5
+957|http://cdn11.castfire.com/video/98/533/1708/166697/Darkest-of-Days_2009-09-29-162830-0.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/957-Darkest-of-Days|Darkest of Days
+969|http://cdn11.castfire.com/video/98/533/1708/170339/Scribblenauts_2009-10-05-142442-0.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/969-Scribblenauts|Scribblenauts
+981|http://cdn11.castfire.com/video/98/533/1708/173845/Wet_2009-10-12-122242-0.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/981-Wet|Wet
 99|http://video.escapistmagazine.com/video/15327/Metal-Gear-Solid-4_2008-06-23-191449.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/99-Metal-Gear-Solid-4|Metal Gear Solid 4
