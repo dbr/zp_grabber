@@ -1,5 +1,6 @@
 1|http://video.escapistmagazine.com/video/12793/Heavenly-Sword-and-Other-Stuff_2008-05-21-075536.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/1-Heavenly-Sword-and-Other-Stuff|Heavenly Sword and Other Stuff
 10|http://video.escapistmagazine.com/video/12803/The-Orange-Box_2008-05-21-080356.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/10-The-Orange-Box|The Orange Box
+1007|http://video.escapistmagazine.com/video/177427/Mario-Luigi-Bowsers-Inside-Story_2009-10-19-114118.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/1007-Mario-Luigi-Bowsers-Inside-Story|Mario & Luigi: Bowser's Inside Story
 108|http://video.escapistmagazine.com/video/15945/Webcomics_2008-06-30-194742.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/108-Webcomics|Webcomics
 11|http://video.escapistmagazine.com/video/12804/Super-Paper-Mario_2008-05-21-080457.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/11-Super-Paper-Mario|Super Paper Mario
 12|http://video.escapistmagazine.com/video/12805/MOH-Airborne_2008-05-21-080547.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/12-MOH-Airborne|MOH Airborne

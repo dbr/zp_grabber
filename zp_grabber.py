@@ -135,10 +135,8 @@ class EscapistVideo:
         
         # Ew. The contents doesn't parse as JSON, so this is necessary
         flv_teller_url = config.split("{'url':'")[2].split("'")[0]
+        return flv_teller_url
 
-        # URL in config must be resolved, it 301 redirects to the real one
-        webp = cached_opener.open(flv_teller_url)
-        return webp.url
 
 #end EscapistVideo
 
