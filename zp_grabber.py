@@ -135,7 +135,9 @@ class EscapistVideo:
         
         # Ew. The contents doesn't parse as JSON, so this is necessary
         flv_teller_url = config.split("{'url':'")[2].split("'")[0]
-        return flv_teller_url
+
+        webp = urllib2.urlopen(flv_teller_url)
+        return webp.url
 
 
 #end EscapistVideo
