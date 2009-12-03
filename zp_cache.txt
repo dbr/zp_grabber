@@ -116,3 +116,4 @@
 1078|http://cdn11.castfire.com/video/98/533/1708/189247/Uncharted-2-Among-Thieves_2009-11-09-124508-1.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/1078-Uncharted-2-Among-Thieves|Uncharted 2: Among Thieves
 1096|http://cdn11.castfire.com/video/98/533/1708/193615/Dragon-Age-Origins_2009-11-17-124248-2011-1-0-0.2011.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/1096-Dragon-Age-Origins|Dragon Age: Origins
 1118|http://cdn11.castfire.com/video/98/533/1708/196627/Call-of-Duty-Modern-Warfare-2_2009-11-23-120154-2011-1-0-0.2011.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/1118-Call-of-Duty-Modern-Warfare-2|Call of Duty: Modern Warfare 2
+1148|http://cdn11.castfire.com/video/98/533/1708/204173/Assassins-Creed-2_2009-12-01-103718-2011-1-0-0.2011.flv|http://www.escapistmagazine.com/videos/view/zero-punctuation/1148-Assassins-Creed-2|Assassin's Creed 2
