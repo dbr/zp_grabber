@@ -91,7 +91,7 @@ class EscapistVideo:
     # Get the video ID
     t.get_vid()
     
-    Working as of Oct 16, 2009 (flashvar="config=http://" system, and resolve 301 redirect to this URL)
+    Working as of Dec 10, 2009 (rtmp URL for mp4 file)
     """
     def __init__(self, url):
         self.url = url
@@ -136,8 +136,8 @@ class EscapistVideo:
         # Ew. The contents doesn't parse as JSON, so this is necessary
         flv_teller_url = config.split("{'url':'")[2].split("'")[0]
 
-        webp = urllib2.urlopen(flv_teller_url)
-        return webp.url
+        # Skip rtmp nonsense
+        return "http://video.themis-media.com/" + flv_teller_url.split("mp4:")[1]
 
 
 #end EscapistVideo
