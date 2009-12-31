@@ -137,7 +137,7 @@ class EscapistVideo:
         flv_teller_url = config.split("{'url':'")[2].split("'")[0]
 
         # Skip rtmp nonsense
-        return "http://video.themis-media.com/" + flv_teller_url.split("mp4:")[1]
+        return flv_teller_url
 
 
 #end EscapistVideo
