@@ -121,3 +121,6 @@
 1321|http://video.themis-media.com/mp4/escapist/zero-punctuation/1321-9c3c0d7384c8f7d02c64d9448c1ee777.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/1321-Demons-Souls|Demon's Souls
 1340|http://video.themis-media.com/mp4/escapist/zero-punctuation/1340-e51f4476e66bc9d0e3c53377186e19d6.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/1340-Holiday-2009|Holiday 2009
 1353|http://video.themis-media.com/mp4/escapist/zero-punctuation/1353-cf68f4ae32891a77ef708e21fee7366f.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/1353-Saboteur|Saboteur
+1367|http://video.themis-media.com/mp4/escapist/zero-punctuation/1367-e1b48d901d3b97c8c7d0fdbe562b607e.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/1367-Awards-for-2009|Awards for 2009
+1385|http://video.themis-media.com/mp4/escapist/zero-punctuation/1385-0a4131abe1ffc86502c96edbb66ebe95.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/1385-Torchlight|Torchlight
+1404|http://video.themis-media.com/mp4/escapist/zero-punctuation/1404-327d1a3289e85441898b6d8e50bc7b30.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/1404-Darksiders|Darksiders
