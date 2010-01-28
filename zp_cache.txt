@@ -124,3 +124,4 @@
 1367|http://video.themis-media.com/mp4/escapist/zero-punctuation/1367-e1b48d901d3b97c8c7d0fdbe562b607e.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/1367-Awards-for-2009|Awards for 2009
 1385|http://video.themis-media.com/mp4/escapist/zero-punctuation/1385-0a4131abe1ffc86502c96edbb66ebe95.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/1385-Torchlight|Torchlight
 1404|http://video.themis-media.com/mp4/escapist/zero-punctuation/1404-327d1a3289e85441898b6d8e50bc7b30.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/1404-Darksiders|Darksiders
+1420|http://video.themis-media.com/mp4/escapist/zero-punctuation/1420-f259847cc0d1ad4b257b49e4f7e5efae.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/1420-Bayonetta|Bayonetta
