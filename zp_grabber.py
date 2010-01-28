@@ -12,7 +12,7 @@ def get_cache_dir(suffix):
     return tmppath
 
 cached_opener = urllib2.build_opener(CacheHandler(get_cache_dir("zp_grabber")))
-cached_opener.addheaders = [('User-agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3')]
+cached_opener.addheaders = [('User-agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2; en-us) AppleWebKit/531.21.8 (KHTML, like Gecko) Version/4.0.4 Safari/531.21.10')]
 
 ####################
 # Helper functions #
