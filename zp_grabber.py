@@ -11,8 +11,21 @@ def get_cache_dir(suffix):
         os.mkdir(tmppath)
     return tmppath
 
+headers = {
+    'user_agent': "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.1.7) Gecko/20091221 Firefox/3.5.7",
+    'accept': "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    'accept_language': "en-gb,en;q=0.5",
+    # Strict Firefox headers would use "gzip,deflate" and would need decoding.
+    #'accept_encoding': "gzip,deflate",
+    'accept_encoding': "identity",
+    'accept_charset': "ISO-8859-1,utf-8;q=0.7,*;q=0.7",
+    'keep_alive': "300",
+    'connection': "keep-alive",
+    'if_modified_since': "Mon, 25 Jan 2000 20:32:57 GMT",
+    'cache_control': "max-age=0",
+}
 cached_opener = urllib2.build_opener(CacheHandler(get_cache_dir("zp_grabber")))
-cached_opener.addheaders = [('User-agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2; en-us) AppleWebKit/531.21.8 (KHTML, like Gecko) Version/4.0.4 Safari/531.21.10')]
+cached_opener.addheaders = headers.items()
 
 ####################
 # Helper functions #
