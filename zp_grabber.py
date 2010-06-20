@@ -139,9 +139,9 @@ class EscapistVideo:
         soup = BeautifulSoup(src)
         
         # Extract player from the soup
-        vid_player = soup.findAll('div', id="video_player")
-        embed = vid_player[0].find('embed')
-        config_url = embed['flashvars'].split("config=")[1]
+        vid_player = soup.find('object', id="player_api")
+        config = vid_player.find("param", {'name': "flashvars"})['value']
+        config_url = config.split("config=")[1]
         
         # Got flashvars config path, load it
         config = cached_opener.open(config_url).read()
