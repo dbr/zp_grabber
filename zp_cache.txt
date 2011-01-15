@@ -176,3 +176,4 @@
 2575|http://video2.themis-media.com/971fb7adb0bb7fe687d96c0b337f7452/mp4/escapist/zero-punctuation/c9a75e252c1fdd0a48bd7f23ecfda589.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/2575-Epic-Mickey|Epic Mickey
 2589|http://video2.themis-media.com/971fb7adb0bb7fe687d96c0b337f7452/mp4/escapist/zero-punctuation/6dd0c1938c3f7b7b6bb32e5f7fc74fa5.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/2589-Holiday-2010|Holiday 2010
 2607|http://video2.themis-media.com/971fb7adb0bb7fe687d96c0b337f7452/mp4/escapist/zero-punctuation/cf9901793d835c996d72e548bc88ccab.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/2607-Top-5-of-2010|Top 5 of 2010
+2634|http://video2.themis-media.com/d3f8ca45796c5695274fa1ed33c3faeb/mp4/escapist/zero-punctuation/c9c1d65768653ad56fb7510d418013a3.mp4|http://www.escapistmagazine.com/videos/view/zero-punctuation/2634-World-of-Warcraft-Cataclysm|World of Warcraft: Cataclysm
