@@ -253,10 +253,24 @@ def main():
         transcode_cmd = t.getcommand(transcoded_name)
         tproc = subprocess.Popen(transcode_cmd)
         tproc.communicate()
-        if gproc.returncode != 0:
-            print "Non-zero exit code: %s" % gproc.returncode
+        if tproc.returncode != 0:
+            print "Non-zero exit code: %s" % tproc.returncode
             continue
         print
+
+        print "Tagging:"
+        tag_command = ["AtomicParsley", transcoded_name, "--TVShowName", "Zero Punctuation", "--TVSeasonNum", "1", "--TVEpisodeNum", str(counter), "--stik", "TV Show", "--overWrite"]
+        print tag_command
+        try:
+            tagproc = subprocess.Popen(tag_command)
+        except OSError, e:
+            print "Error while launching AtomicParsley, may not be installed?"
+            print e
+        else:
+            tagproc.communicate()
+            if tagproc.returncode != 0:
+                print "Non-zero exit code while tagging: %s" % tagproc.returncode
+                print
         
         # Mark as done, as save
         state.add_done(vid)
