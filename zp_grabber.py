@@ -9,6 +9,7 @@ def get_cache_dir(suffix):
     tmppath = os.path.join(tmp, suffix)
     if not os.path.isdir(tmppath):
         os.mkdir(tmppath)
+    print "Temp directory:", tmppath
     return tmppath
 
 headers = {
