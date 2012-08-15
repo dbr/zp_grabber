@@ -179,7 +179,7 @@ def parse_page_for_videos(zpc, soup):
         title = cv.findAll('div',{'class':'title'})[0].contents[0]
 
         # Crudely remove "<i>HTML stuff</i>" from title
-        title = re.sub("</?[a-z]+>", "", title)
+        title = re.sub("</?[a-z]+>", "", str(title)) #TODO: title.text instead?
 
         if cv.a['href'].startswith("http://"):
             web_url = cv.a['href']
